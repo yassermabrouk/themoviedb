@@ -17,15 +17,16 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var itemLabel: UILabel!
     
-    func updateUI(item : Item){
-        itemLabel.text = item.itemTitle
-        descriptionLabel.text = item.itemDescription
+    func updateUI(item : Movie){
+        itemLabel.text = item.original_title
+        descriptionLabel.text = item.overview
         
         self.itemImageView.kf.indicatorType = .activity
-        let url = URL(string: item.itemUrl)
+        print("Download Started")
+        let url = URL(string: item.poster_full_path())
         self.itemImageView.kf.setImage(with: url)
         (self.itemImageView.kf.indicator?.view as? UIActivityIndicatorView)?.color = .white
-        itemImageView.contentMode = .scaleAspectFit
+//        itemImageView.contentMode = .scaleAspectFit
         
         
         // Basic download

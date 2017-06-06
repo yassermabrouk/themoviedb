@@ -8,4 +8,6 @@ target 'themoviedb' do
   pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
   #  pure-Swift library for downloading and caching images from the web.
   pod 'Kingfisher', '~> 3.0'
+  # JSONModel allows rapid creation of smart data models.
+  pod 'Gloss', '~> 1.2'
 end
