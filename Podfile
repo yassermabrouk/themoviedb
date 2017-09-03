@@ -10,4 +10,6 @@ target 'themoviedb' do
   pod 'Kingfisher', '~> 3.0'
   # JSONModel allows rapid creation of smart data models.
   pod 'Gloss', '~> 1.2'
+  # delay in Main thread by default
+  pod 'HandySwift', '~> 2.3'
 end

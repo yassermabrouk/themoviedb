@@ -22,7 +22,7 @@ class MainTableViewCell: UITableViewCell {
         descriptionLabel.text = item.overview
         
         self.itemImageView.kf.indicatorType = .activity
-        print("Download Started")
+//        print("Download Started")
         let url = URL(string: item.poster_full_path())
         self.itemImageView.kf.setImage(with: url)
         (self.itemImageView.kf.indicator?.view as? UIActivityIndicatorView)?.color = .white
