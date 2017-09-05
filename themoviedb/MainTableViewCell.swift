@@ -26,7 +26,7 @@ class MainTableViewCell: UITableViewCell {
         let url = URL(string: item.poster_full_path())
         self.itemImageView.kf.setImage(with: url)
         (self.itemImageView.kf.indicator?.view as? UIActivityIndicatorView)?.color = .white
-//        itemImageView.contentMode = .scaleAspectFit
+        itemImageView.contentMode = .scaleAspectFit
         
         
         // Basic download

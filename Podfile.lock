@@ -1,21 +1,27 @@
 PODS:
   - Alamofire (4.2.0)
   - Gloss (1.2.4)
+  - HandySwift (2.3.0)
   - Kingfisher (3.6.2)
+  - REFrostedViewController (2.4.8)
   - UIScrollView-InfiniteScroll (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.2.0)
   - Gloss (~> 1.2)
+  - HandySwift (~> 2.3)
   - Kingfisher (~> 3.0)
+  - REFrostedViewController
   - UIScrollView-InfiniteScroll (~> 1.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
+  HandySwift: 341c48b4b469be461625ae5842ddbacdb9df1bcd
   Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
+  REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
   UIScrollView-InfiniteScroll: a90df4ba4a7ca1926128ade34a850ddbdf74c564
 
-PODFILE CHECKSUM: 791fc52f8717b71ffc99967a6be7cc23f65fee73
+PODFILE CHECKSUM: 3e631e2f13b4938513181ebcbb395f4c839ce84f
 
 COCOAPODS: 1.2.1

@@ -28,7 +28,10 @@ struct Movie: Decodable {
     }
     
     func poster_full_path()-> String {
-        return "https://image.tmdb.org/t/p/original/\(self.poster_path!)"
+//        return "https://image.tmdb.org/t/p/original/\(self.poster_path!)"
+        // t/p/w500_and_h281_bestv2
+         return "https://image.tmdb.org/t/p/w500_and_h281_bestv2/\(self.poster_path!)"
+        
     }
     
     

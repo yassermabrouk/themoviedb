@@ -12,4 +12,8 @@ target 'themoviedb' do
   pod 'Gloss', '~> 1.2'
   # delay in Main thread by default
   pod 'HandySwift', '~> 2.3'
+  # https://github.com/romaonthego/REFrostedViewController
+  pod 'REFrostedViewController', '~> 2.4'
+
+
 end
