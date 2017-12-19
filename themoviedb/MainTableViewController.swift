@@ -116,19 +116,6 @@ class MainTableViewController: UITableViewController {
         self.dateFormatter.dateStyle = DateFormatter.Style.short
         self.dateFormatter.timeStyle = DateFormatter.Style.long
        
-        
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
-        refreshControl.backgroundColor = UIColor.clear
-        refreshControl.tintColor = UIColor.black
-        refreshControl.attributedTitle = NSAttributedString(string: "Loading...")
-        
-                if #available(iOS 10.0, *) {
-                    tableView.refreshControl = refreshControl
-                } else {
-                    tableView.backgroundView = refreshControl
-                }
-        
         requestPopularMovies()
         
     

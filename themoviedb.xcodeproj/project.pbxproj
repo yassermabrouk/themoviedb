@@ -19,6 +19,7 @@
 		8940E8E31EB77CB600520533 /* themoviedbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8940E8E21EB77CB600520533 /* themoviedbUITests.swift */; };
 		89A1DA3E1EDF82F000AEF14E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1DA3C1EDF82F000AEF14E /* Movie.swift */; };
 		89A1DA3F1EDF82F000AEF14E /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1DA3D1EDF82F000AEF14E /* MovieResults.swift */; };
+		89CA700E1F61489500235530 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CA700D1F61489500235530 /* PopularCollectionViewCell.swift */; };
 		89DB05021EC68249007B13E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB05011EC68249007B13E9 /* Item.swift */; };
 		89DB050A1EC68FBC007B13E9 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB05091EC68FBC007B13E9 /* MainTableViewController.swift */; };
 		89DB050C1EC694AC007B13E9 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB050B1EC694AC007B13E9 /* MainTableViewCell.swift */; };
@@ -53,6 +54,7 @@
 		8940E8E41EB77CB600520533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89A1DA3C1EDF82F000AEF14E /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		89A1DA3D1EDF82F000AEF14E /* MovieResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieResults.swift; sourceTree = "<group>"; };
+		89CA700D1F61489500235530 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		89DB05011EC68249007B13E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		89DB05091EC68FBC007B13E9 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		89DB050B1EC694AC007B13E9 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				891526E11F5DF57900945917 /* MenuViewController.swift */,
 				891526E21F5DF57900945917 /* NavigationController.swift */,
 				891526E31F5DF57900945917 /* PopularViewController.swift */,
+				89CA700D1F61489500235530 /* PopularCollectionViewCell.swift */,
 			);
 			path = themoviedb;
 			sourceTree = "<group>";
@@ -281,13 +284,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-themoviedb-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C7515CB4425888B58CAFCBA1 /* [CP] Embed Pods Frameworks */ = {
@@ -296,9 +302,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-themoviedb/Pods-themoviedb-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-Gloss/Moya_Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/REFrostedViewController/REFrostedViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/REFrostedViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -317,6 +342,7 @@
 				89FFAA7E1EBE05510027C71E /* Router.swift in Sources */,
 				891526E41F5DF57900945917 /* RootViewController.swift in Sources */,
 				89DB050C1EC694AC007B13E9 /* MainTableViewCell.swift in Sources */,
+				89CA700E1F61489500235530 /* PopularCollectionViewCell.swift in Sources */,
 				891526E61F5DF57900945917 /* MenuViewController.swift in Sources */,
 				891526E81F5DF57900945917 /* PopularViewController.swift in Sources */,
 				8940E8D31EB77CB600520533 /* themoviedb.xcdatamodeld in Sources */,
